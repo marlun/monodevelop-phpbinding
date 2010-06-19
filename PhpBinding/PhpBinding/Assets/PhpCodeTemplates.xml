@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>if</Shortcut>
+      <_Description>Template for 'if' statement</_Description>
+      <TemplateType>Expansion, SurroundsWith</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="expression">
+        <Default>true</Default>
+        <_ToolTip>Expression to evaluate</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[if ($expression$) 
+{
+	$selected$$end$
+}]]></Code>
+  </CodeTemplate>
+  
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>else</Shortcut>
+      <_Description>Template for 'else' statement</_Description>
+      <TemplateType>Expansion, SurroundsWith</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="expression">
+        <Default>true</Default>
+        <_ToolTip>Expression to evaluate</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[else
+{
+	$selected$$end$
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

@@ -1,0 +1,57 @@
+<Addin id          = "PhpBinding"
+       namespace   = "MonoDevelop"
+       name		   = "PHP Language Binding"
+       author      = "Martin Lundberg"
+       copyright   = "MIT/X11"
+       url         = "http://www.monodevelop.com"
+       description = "PHP Language binding"
+       category    = "Language bindings"
+       version     = "2.4.0">
+
+	<Dependencies>
+		<Addin id = "Core" version = "2.4.0"/>
+		<Addin id = "Ide" version = "2.4.0"/>
+	</Dependencies>
+	
+	<Extension path = "/MonoDevelop/Core/StockIcons">
+		<StockIcon stockid = "md-php-file" resource = "MonoDevelop.PhpBinding.icons.text-x-php.16x16.png" />
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/Ide/FileFilters">
+		<FileFilter
+			id = "PHP"
+			insertbefore = "AllFiles"
+			_label = "PHP Filwa"
+			extensions = "*.php" />
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/Ide/FileTemplates">
+		<FileTemplate id = "EmptyPhpSourceFile" resource = "EmptyPhpSourceFile.xft.xml"/>
+	</Extension>
+
+	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
+		<ProjectTemplate id = "EmptyPhpProject" resource = "EmptyPhpProject.xpt.xml"/>
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/Core/MimeTypes">
+		<MimeType id="text/x-php" icon="md-php-file">
+			<File pattern="*.php" />
+		</MimeType>
+	</Extension>
+
+	<Extension path = "/MonoDevelop/ProjectModel/ProjectBindings">
+		<ProjectBinding id = "PhpProject" class = "MonoDevelop.PhpBinding.PhpProjectBinding"/>
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
+		<LanguageBinding
+			id = "PHP"
+		    supportedextensions = ".php"
+		    class = "MonoDevelop.PhpBinding.PhpLanguageBinding"/>
+    </Extension>
+    
+	<Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
+		<DataType class = "MonoDevelop.PhpBinding.PhpProjectConfiguration"/>
+		<DataType class = "MonoDevelop.PhpBinding.PhpProject"/>
+	</Extension>
+</Addin>

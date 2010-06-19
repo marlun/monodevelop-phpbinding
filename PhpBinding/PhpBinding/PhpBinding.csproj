@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A384480-9CC3-4B49-AB8B-F8BD2F0767A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PhpBinding</RootNamespace>
+    <AssemblyName>PhpBinding</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp PhpCodeTemplates.xml /Users/marlun/.config/MonoDevelop/templates/code" workingdir="${SolutionDir}/build/Assets" />
+        <Command type="AfterBuild" command="cp PhpBinding.dll /Users/marlun/Downloads/Sources/monodevelop/main/build/AddIns" workingdir="${SolutionDir}/build" />
+        <Command type="AfterBuild" command="cp PhpSyntaxMode.xml /Users/marlun/.config/MonoDevelop/syntaxmodes" workingdir="${SolutionDir}/build/Assets" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>build\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="MonoDevelop.Core, Version=2.4.0.0, Culture=neutral">
+      <Package>monodevelop</Package>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="MonoDevelop.Ide, Version=2.4.0.0, Culture=neutral">
+      <Package>monodevelop</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Project\PhpProject.cs" />
+    <Compile Include="Project\PhpProjectBinding.cs" />
+    <Compile Include="Project\PhpProjectConfiguration.cs" />
+    <Compile Include="PhpLanguageBinding.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Project\" />
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\PhpCodeTemplates.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\PhpSyntaxMode.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PhpBinding.addin.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Icons\php-icon-32.png" />
+    <EmbeddedResource Include="Assets\Icons\text-x-php.16x16.png" />
+    <EmbeddedResource Include="Assets\Icons\text-x-php.22x22.png" />
+    <EmbeddedResource Include="Assets\Icons\text-x-php.32x32.png" />
+    <EmbeddedResource Include="Assets\Icons\text-x-php.48x48.png" />
+    <EmbeddedResource Include="Assets\Templates\EmptyPhpProject.xpt.xml" />
+    <EmbeddedResource Include="Assets\Templates\EmptyPhpSourceFile.xft.xml" />
+  </ItemGroup>
+</Project>

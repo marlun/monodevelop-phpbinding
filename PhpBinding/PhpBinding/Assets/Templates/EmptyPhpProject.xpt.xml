@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Template
+	originator   = "Martin Lundberg"
+    created      = "07/24/2008"
+    lastModified = "07/24/2008">
+	
+	<!-- Template Header -->
+	<TemplateConfiguration>
+		<_Name>Empty PHP Project</_Name>
+		<_Category>PHP</_Category>
+		<Icon>md-project|res:MonoDevelop.PhpBinding.icons.php-icon-32.png</Icon>
+		<LanguageName>PHP</LanguageName>
+		<_Description>Creates an empty PHP solution.</_Description>
+	</TemplateConfiguration>
+	
+	<!-- Template Content -->
+	<Combine name = "${ProjectName}" directory = ".">
+		<Project name = "${ProjectName}" directory = "." type = "PHP">
+			<Options
+				PauseConsoleOutput = "True"
+				/>
+		</Project>
+	</Combine>
+</Template>
