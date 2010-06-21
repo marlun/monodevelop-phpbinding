@@ -65,7 +65,6 @@
     <None Include="Assets\PhpSyntaxMode.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PhpBinding.addin.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Assets\Icons\php-icon-32.png" />
@@ -75,5 +74,6 @@
     <EmbeddedResource Include="Assets\Icons\text-x-php.48x48.png" />
     <EmbeddedResource Include="Assets\Templates\EmptyPhpProject.xpt.xml" />
     <EmbeddedResource Include="Assets\Templates\EmptyPhpSourceFile.xft.xml" />
+    <EmbeddedResource Include="PhpBinding.addin.xml" />
   </ItemGroup>
 </Project>

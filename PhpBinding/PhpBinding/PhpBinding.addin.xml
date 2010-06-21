@@ -9,8 +9,8 @@
        version     = "2.4.0">
 
 	<Dependencies>
-		<Addin id = "Core" version = "2.4.0"/>
-		<Addin id = "Ide" version = "2.4.0"/>
+		<Addin id = "Core" version = "2.4"/>
+		<Addin id = "Ide" version = "2.4"/>
 	</Dependencies>
 	
 	<Extension path = "/MonoDevelop/Core/StockIcons">
@@ -26,11 +26,11 @@
 	</Extension>
 	
 	<Extension path = "/MonoDevelop/Ide/FileTemplates">
-		<FileTemplate id = "EmptyPhpSourceFile" resource = "EmptyPhpSourceFile.xft.xml"/>
+		<FileTemplate id = "EmptyPhpSourceFile" resource = "PhpBinding.Assets.Templates.EmptyPhpSourceFile.xft.xml"/>
 	</Extension>
 
 	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
-		<ProjectTemplate id = "EmptyPhpProject" resource = "EmptyPhpProject.xpt.xml"/>
+		<ProjectTemplate id = "EmptyPhpProject" resource = "PhpBinding.Assets.Templates.EmptyPhpProject.xpt.xml"/>
 	</Extension>
 	
 	<Extension path = "/MonoDevelop/Core/MimeTypes">
