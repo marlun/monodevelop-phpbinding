@@ -17,10 +17,9 @@
     </Variables>
     <Code><![CDATA[if ($expression$) 
 {
-	$selected$$end$
+	$end$
 }]]></Code>
   </CodeTemplate>
-  
   <CodeTemplate version="2.0">
     <Header>
       <_Group>PHP</_Group>
@@ -38,7 +37,92 @@
     </Variables>
     <Code><![CDATA[else
 {
-	$selected$$end$
+	$end$
+}]]></Code>
+  </CodeTemplate>
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>foreach</Shortcut>
+      <_Description>Template for a 'foreach' statement</_Description>
+      <TemplateType>Expansion, SurroundsWith</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="array">
+        <Default>array</Default>
+        <_ToolTip>The array to iterate.</_ToolTip>
+      </Variable>
+      <Variable name="item">
+        <Default>item</Default>
+        <_ToolTip>A variable name for each item.</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[foreach ($array$ as $item$)
+{
+	$end$
+}]]></Code>
+  </CodeTemplate>
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>switch</Shortcut>
+      <_Description>Template for a 'switch' statement</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="var">
+        <Default>switch_on</Default>
+        <_ToolTip>The variable to switch on.</_ToolTip>
+      </Variable>
+      <Variable name="first_case">
+        <Default>first_case</Default>
+      </Variable>
+      <Variable name="default_break">
+        <Default>break;</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[switch ($var$)
+{
+	case $first_case$:
+		$end$
+	default:
+		$default_break$
+}]]></Code>
+  </CodeTemplate>
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>try</Shortcut>
+      <_Description>Template for a 'try catch' statement</_Description>
+      <TemplateType>Expansion, SurroundsWith</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="exception_type">
+        <Default>Exception</Default>
+        <_ToolTip>The exception type.</_ToolTip>
+      </Variable>
+      <Variable name="exception_var">
+        <Default>$ex</Default>
+        <_ToolTip>The exception variable name.</_ToolTip>
+      </Variable>
+      <Variable name="catch_impl">
+        <Default></Default>
+        <_ToolTip>Code that runs when exception is catched.</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[try
+{
+	$end$
+}
+catch ($exception_type$ $exception_var$)
+{
+	$catch_impl$
 }]]></Code>
   </CodeTemplate>
 </CodeTemplates>

@@ -22,7 +22,6 @@
     <ConsolePause>false</ConsolePause>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="cp PhpCodeTemplates.xml /Users/marlun/.config/MonoDevelop/templates/code" workingdir="${SolutionDir}/build/Assets" />
         <Command type="AfterBuild" command="cp PhpBinding.dll /Users/marlun/Downloads/Sources/monodevelop/main/build/AddIns" workingdir="${SolutionDir}/build" />
         <Command type="AfterBuild" command="cp PhpSyntaxMode.xml /Users/marlun/.config/MonoDevelop/syntaxmodes" workingdir="${SolutionDir}/build/Assets" />
       </CustomCommands>
@@ -59,9 +58,6 @@
     <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\PhpCodeTemplates.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Assets\PhpSyntaxMode.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -75,5 +71,6 @@
     <EmbeddedResource Include="Assets\Templates\EmptyPhpProject.xpt.xml" />
     <EmbeddedResource Include="Assets\Templates\EmptyPhpSourceFile.xft.xml" />
     <EmbeddedResource Include="PhpBinding.addin.xml" />
+    <EmbeddedResource Include="Assets\PhpCodeTemplates.xml" />
   </ItemGroup>
 </Project>

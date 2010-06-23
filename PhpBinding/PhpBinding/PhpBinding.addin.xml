@@ -54,4 +54,8 @@
 		<DataType class = "MonoDevelop.PhpBinding.PhpProjectConfiguration"/>
 		<DataType class = "MonoDevelop.PhpBinding.PhpProject"/>
 	</Extension>
+	
+	<Extension path = "/MonoDevelop/Ide/CodeTemplates">
+		<CodeTemplate resource="PhpBinding.Assets.PhpCodeTemplates.xml"/>
+	</Extension>
 </Addin>
