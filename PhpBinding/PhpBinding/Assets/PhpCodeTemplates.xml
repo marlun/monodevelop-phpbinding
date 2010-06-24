@@ -17,7 +17,7 @@
     </Variables>
     <Code><![CDATA[if ($expression$) 
 {
-	$end$
+	$selected$$end$
 }]]></Code>
   </CodeTemplate>
   <CodeTemplate version="2.0">
@@ -37,7 +37,7 @@
     </Variables>
     <Code><![CDATA[else
 {
-	$end$
+	$selected$$end$
 }]]></Code>
   </CodeTemplate>
   <CodeTemplate version="2.0">
@@ -61,7 +61,7 @@
     </Variables>
     <Code><![CDATA[foreach ($array$ as $item$)
 {
-	$end$
+	$selected$$end$
 }]]></Code>
   </CodeTemplate>
   <CodeTemplate version="2.0">
@@ -118,7 +118,7 @@
     </Variables>
     <Code><![CDATA[try
 {
-	$end$
+	$selected$$end$
 }
 catch ($exception_type$ $exception_var$)
 {
