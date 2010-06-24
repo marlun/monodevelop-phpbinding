@@ -55,6 +55,10 @@
 		<DataType class = "MonoDevelop.PhpBinding.PhpProject"/>
 	</Extension>
 	
+	<Extension path = "/MonoDevelop/Ide/TextEditorExtensions">
+		<Class fileExtensions = ".php" id = "PhpBinding.Formatting.PhpTextEditorIndentation" class = "PhpBinding.Formatting.PhpTextEditorIndentation" />
+	</Extension>
+	
 	<Extension path = "/MonoDevelop/Ide/CodeTemplates">
 		<CodeTemplate resource="PhpBinding.Assets.PhpCodeTemplates.xml"/>
 	</Extension>
