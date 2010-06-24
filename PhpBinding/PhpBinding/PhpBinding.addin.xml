@@ -14,7 +14,7 @@
 	</Dependencies>
 	
 	<Extension path = "/MonoDevelop/Core/StockIcons">
-		<StockIcon stockid = "md-php-file" resource = "MonoDevelop.PhpBinding.icons.text-x-php.16x16.png" />
+		<StockIcon stockid = "md-php-file" resource = "PhpBinding.Assets.Icons.text-x-php.16x16.png" />
 	</Extension>
 	
 	<Extension path = "/MonoDevelop/Ide/FileFilters">
