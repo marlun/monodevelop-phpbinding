@@ -125,4 +125,89 @@ catch ($exception_type$ $exception_var$)
 	$catch_impl$
 }]]></Code>
   </CodeTemplate>
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>class</Shortcut>
+      <_Description>Template for a 'class' statement</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="class_name">
+        <Default>ClassName</Default>
+        <_ToolTip>Name of the class.</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[class $class_name$
+{
+	$end$
+}]]></Code>
+  </CodeTemplate>
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>func</Shortcut>
+      <_Description>Template for a 'function' statement</_Description>
+      <TemplateType>Expansion, SurroundsWith</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="function_name">
+        <Default>functionName</Default>
+        <_ToolTip>Name of the function.</_ToolTip>
+      </Variable>
+      <Variable name="params">
+        <Default>params</Default>
+        <_ToolTip>Function parameters.</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[function $function_name$ ($params$)
+{
+	$end$
+}]]></Code>
+  </CodeTemplate>
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>for</Shortcut>
+      <_Description>Template for a 'for' loop</_Description>
+      <TemplateType>Expansion, SurroundsWith</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="index">
+        <Default>$i</Default>
+      </Variable>
+      <Variable name="max">
+        <Default>$max</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[for ($index$ = 0; $index$ < $max$; $index$++)
+{
+	$selected$$end$
+}]]></Code>
+  </CodeTemplate>
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>PHP</_Group>
+      <Version>1.0</Version>
+      <MimeType>text/x-php</MimeType>
+      <Shortcut>while</Shortcut>
+      <_Description>Template for a 'while' loop</_Description>
+      <TemplateType>Expansion, SurroundsWith</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="expression">
+        <Default>expression</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[while ($expression$)
+{
+	$selected$$end$
+}]]></Code>
+  </CodeTemplate>
 </CodeTemplates>
